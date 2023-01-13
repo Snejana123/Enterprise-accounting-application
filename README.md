@@ -55,17 +55,17 @@ Methods:
 • -createStatusBar():void – create application status bar
 
 Slots:
-• +backgroundTheme
-• +lemonGateSlot
-• +fruitBlendSlot
-• +plumPlateSlot
-• +perfectWhiteSlot
-• +equalModeSlot
-• +queueLengthModeSlot
-• -aboutSlot
-• -settingsSlot
-• -cashDesksSlot
-• -controlWindSlot
++backgroundTheme
++lemonGateSlot
++fruitBlendSlot
++plumPlateSlot
++perfectWhiteSlot
++equalModeSlot
++queueLengthModeSlot
+-aboutSlot
+-settingsSlot
+-cashDesksSlot
+-controlWindSlot
 
 
 class settingsWindow - Domain settings window
