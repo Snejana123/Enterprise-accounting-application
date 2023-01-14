@@ -7,15 +7,31 @@ Accounting consists of many cash registers. Customers come to the accounting dep
 2. Diagrams of the object model
 2.1. Use Case Diagram
 
+![use-case](https://user-images.githubusercontent.com/103432419/212476247-cabd1d58-b899-4309-9d6e-515dc2df8088.jpg)
+
+Picture 1. Case Diagram
+
 2.2. Entity-relationship model
 
+![Entity-relationship](https://user-images.githubusercontent.com/103432419/212476942-04845b16-078f-4250-bc47-2cae6b836e4b.jpg)
+
+Picture 2. Entity-relationship diagram
+
 2.3. Class diagram
+
+![classDiagram](https://user-images.githubusercontent.com/103432419/212476346-4a29f80e-1814-4292-85fd-ae24b4195448.png)
+
+Picture 3. Class diagram
 
 2.4 List of library constructor classes used in the project to build the class diagram
 QWidget - a class for implementing program user interface widgets
 QHBoxLayout - layout for horizontal layout of widgets
 
 2.5. Signal-slot connection scheme implemented in the project
+
+![signal-slot](https://user-images.githubusercontent.com/103432419/212476386-28854667-157d-487f-80a4-64da3d6df12d.png)
+
+Picture 4. Scheme of signal-slot connection
 
 3. Application "Interface"
 The application has an MDI interface.
@@ -24,18 +40,30 @@ The application has an MDI interface.
 
 3.1.1. Main window
 
+![green](https://user-images.githubusercontent.com/103432419/212477224-4e7a0aa8-7e05-44ef-b881-5b7db46dc498.jpg)
+
 Picture 5. Main application window with green theme selected
+
+![orange](https://user-images.githubusercontent.com/103432419/212477339-81b7cd33-29b0-4198-9e16-f615c01c571f.png)
 
 Picture 6. Main application window with orange theme selected
 
 3.1.2. Software parameters window
 
+![окноПараметров](https://user-images.githubusercontent.com/103432419/212477455-dbf380aa-bc24-4f99-9417-697320a0f8e0.png)
+
 Picture 7. Application settings window
 
 3.1.3. Event control window
+
+![окноУправления](https://user-images.githubusercontent.com/103432419/212477680-2a053675-420d-4325-b05d-350bde3e9438.png)
+
 Picture 8. Application event management window
 
 3.1.4. Object state display window
+
+![Рисунок9](https://user-images.githubusercontent.com/103432419/212480465-209746d3-d08a-47a1-9602-6fd97599e15c.png)
+
 Picture 9. Window for displaying the state of objects
 
 3.1.5. Interface class header files
@@ -114,6 +142,14 @@ States: Checkout open - From, Checkout closed - Zk, Number of customers in the q
 4) Client removing ClR-
 
 4.2. State Diagrams of ObD Model Classes
+
+![Pic10](https://user-images.githubusercontent.com/103432419/212481258-7c926404-637c-4576-9892-ce86699c1606.jpg)
+
+Picture 10. State diagram of the Accounting class
+
+
+
+Picture 11. State diagram of the Checkout class
 
 4.3. Header Files of ObD Model Classes
 
