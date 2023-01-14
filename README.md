@@ -135,7 +135,7 @@ Developments:
 1) Checkout adding K+ 
 2) Checkout removing K-
 Checkout:
-States: Checkout open - From, Checkout closed - Zk, Number of customers in the queue - N(x)
+States: Checkout open - Open, Checkout closed - Closed, Number of customers in the queue - N(x)
 1) Checkout closing ChC
 2) Checkout opening ChO
 3) Client adding Cl+
@@ -145,11 +145,11 @@ States: Checkout open - From, Checkout closed - Zk, Number of customers in the q
 
 ![Pic10](https://user-images.githubusercontent.com/103432419/212481258-7c926404-637c-4576-9892-ce86699c1606.jpg)
 
-Picture 10. State diagram of the Accounting class
+Picture 10. Accounting class state diagram
 
+![Accounting_class_state_diagram_1](https://user-images.githubusercontent.com/103432419/212495507-f9ce6009-acfb-4467-927c-68d648fc8486.jpg)
 
-
-Picture 11. State diagram of the Checkout class
+Picture 11. Checkout class state diagram
 
 4.3. Header Files of ObD Model Classes
 
