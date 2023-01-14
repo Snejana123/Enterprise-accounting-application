@@ -204,6 +204,7 @@ Slots:
 
 
 settingsWidget class - application settings implementing class
+  
 Attributes:
 • +probModeLab: QLabel * - client distribution mode selecting label 
 • +themeLab: QLabel * - application theme selecting label
@@ -222,6 +223,7 @@ Attributes:
 • +settLay: QVBoxLayout * - menu layout
 • +settingsWidget(QWidget *) – class constructor
 • +~settingsWidget() – class destructor
+  
 Signals:
 • modeSig(int mode);
 • perfectWhiteSig();
