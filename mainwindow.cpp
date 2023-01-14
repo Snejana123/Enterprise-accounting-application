@@ -119,7 +119,7 @@ void MainWindow::createActions()
 
 
 void MainWindow::aboutSlot(){
-    QMessageBox::information(this, "About application", "Course work. Student: Leonova Amelia");
+    QMessageBox::information(this, "About application", "Creator: Leonova Amelia Alexandrovna. GMAIL: amelia.leonova@gmail.com");
 }
 
 
