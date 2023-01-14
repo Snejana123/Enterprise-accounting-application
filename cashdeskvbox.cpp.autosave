@@ -1,0 +1,78 @@
+#include "cashdeskvbox.h"
+
+cashDeskVBox::cashDeskHBox(QWidget * parent, int deskNum)//: hboxl(new QHBoxLayout)
+{
+    hboxl = new QHBoxLayout(parent);
+    hboxl->setContentsMargins(5,5,5,5);
+    hboxl -> setSpacing(5);
+    deskNumber = deskNum;
+    parentW = parent;
+    deskLabel = new QLabel(parentW);
+    mainFont.setBold(true);
+    mainFont.setPointSize(20);
+    //deskLabel->setFont(QFont(QT::black, 2));
+    deskLabel->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+    deskLabel -> setMaximumWidth(120);
+    deskLabel->setStyleSheet("QLabel { background-color : green; color : black}");
+    deskLabel->setFont(mainFont);
+    deskLabel->setText(QString().setNum(deskNumber));
+    hboxl -> addWidget(deskLabel);
+    isOpen = true;
+}
+
+void cashDeskVBox::addClient(int clientNum){
+    QLabel * newClient = new QLabel(QString().setNum(clientNum), parentW);
+    newClient->setStyleSheet("QLabel { background-color : black; color : white}");
+    newClient->setFont(mainFont);
+    newClient->setNum(clientNum);
+    newClient->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+    clientsLabels.append(newClient);
+    hboxl -> addWidget(newClient);
+}
+
+bool cashDeskVBox::deleteClient(int clientNum){
+    int size = clientsLabels.size();
+    QLabel *next;
+    for (int i = 0; i < size; i++){
+        next = clientsLabels.value(i);
+        QString txt = next->text();
+        if (txt == QString().setNum(clientNum)){
+            hboxl -> removeWidget(clientsLabels.at(i));
+            clientsLabels.removeAt(i);
+            delete next;
+            return true;
+        }
+    }
+    return false;
+}
+
+void cashDeskVBox::closeDesk(){
+    isOpen = false;
+    deskLabel->setStyleSheet("QLabel { background-color : red; color : black}");
+}
+
+void cashDeskVBox::openDesk(){
+    isOpen = true;
+    deskLabel->setStyleSheet("QLabel { background-color : green; color : black}");
+}
+
+int cashDeskVBox::getDeskNumber(){
+    return deskNumber;
+}
+bool cashDeskVBox::getOpenStatue(){
+    return isOpen;
+}
+
+cashDeskVBox::~cashDeskVBox(){
+    delete deskLabel;
+    int size = clientsLabels.size();
+    QLabel *next;
+    for (int i = 0; i < size; i++){
+        next = clientsLabels.value(i);
+        delete next;
+    }
+}
+
+QHBoxLayout* cashDeskVBox::getHBoxLayout(){
+    return hboxl;
+}
